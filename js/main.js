@@ -24,26 +24,27 @@ drop.addEventListener("click", function () {
 })
 
 dropelement[0].addEventListener("click", function () {
-
     let price = 0
     klick.innerText = dropelement[0].innerText
     package[2].style.display = "flex"
     packageinnertext[2].innerText = "Basic"
-    packageprice[2].innerText = price + "$"
+    packageprice[2].innerText = "$" + price
 })
 dropelement[1].addEventListener("click", function () {
     let price = 25
     klick.innerText = dropelement[1].innerText
     package[2].style.display = "flex"
     packageinnertext[2].innerText = "Professional"
-    packageprice[2].innerText = price + "$"
+    packageprice[2].innerText = "$" + price
+    price = secoundprice
 })
 dropelement[2].addEventListener("click", function () {
     let price = 60
     klick.innerText = dropelement[2].innerText
     package[2].style.display = "flex"
     packageinnertext[2].innerText = "Premium"
-    packageprice[2].innerText = price + "$"
+    packageprice[2].innerText = "$" + price
+    price = firstprice
 })
 
 checkbox1.addEventListener("change", function () {
@@ -60,14 +61,8 @@ checkbox2.addEventListener("change", function () {
         package[4].style.display = "none"
     }
 })
-// calc.addEventListener("mousemove",function (){
-//     total.style.display = "flex"
-//     totalprice.innerText = "0$"
-// })
-// calc.addEventListener("mouseout",function (){
-//     total.style.display = "none"
-// })
- total.style.display = "flex";
+
+total.style.display = "flex";
 
 number.addEventListener("input",function (){
     package[0].style.display = "flex"
@@ -103,11 +98,18 @@ number2.addEventListener("input",function (){
         price[1].innerHTML = "$" + 0
     }
 })
-console.log(totalprice);
-console.log(packageprice);
-for (let el of packageprice) {
-    let sum = number + number2
-    total.addEventListener("click", function () {
-            totalprice.innerText = sum
-    })
-}
+    // let firstprice
+    // let secoundprice
+    // let thirdprice = 0;
+    // let fourprice = 0;
+    // let fiveprice = 0;
+
+    // let oneprice = parseInt(firstprice)
+    // let twoprice = parseInt(secoundprice)
+
+    // console.log(fiveprice)
+    // console.log(fourprice)
+
+    // totalprice.innerHTML= parseInt(firstprice + secoundprice )
+    // console.log(totalprice)
+    //

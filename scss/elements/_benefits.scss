@@ -44,6 +44,7 @@
         }
 
         &::before {
+          animation: circle 15s  infinite linear;
           content: "";
           width: 180px;
           height: 180px;
@@ -93,6 +94,7 @@
         }
 
         &::before {
+          animation: pulse 2s linear infinite;
           content: "";
           width: 320px;
           height: 320px;
@@ -176,6 +178,7 @@
       }
 
       img {
+        animation: pulse 1s linear infinite;
         width: 295px;
         height: auto;
         margin-top: 55px;
@@ -216,9 +219,11 @@
   &__image {
     position: relative;
 
+
     img {
       position: relative;
       z-index: 2;
+
     }
   }
 }

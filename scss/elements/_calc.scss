@@ -63,6 +63,7 @@
       padding: 13px 20px;
       cursor: pointer;
 
+
       &::after {
         content: "";
         //background-image: url("../assets/Arrow.svg");
@@ -72,7 +73,13 @@
         position: absolute;
         right: 14px;
         top: 9px;
+
+
+        &:hover{
+          border: 2px solid blue;
+        }
       }
+
     }
 
     .select__dropdown {
@@ -168,3 +175,11 @@
     }
   }
 }
+.form__input{
+  &:focus{
+    border: 2px solid $color-green;
+  }
+}
+
+
+

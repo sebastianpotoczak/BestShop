@@ -613,6 +613,8 @@ h2 {
 .opening__header {
   font-family: "Raleway", sans-serif;
   font-size: 3.0625rem;
+  -webkit-animation: circle 2s linear;
+          animation: circle 2s linear;
 }
 .opening__heading {
   margin-top: 20px;
@@ -772,6 +774,8 @@ h2 {
   }
 }
 .benefits__single--notebook .benefits__image::before {
+  -webkit-animation: circle 15s infinite linear;
+          animation: circle 15s infinite linear;
   content: "";
   width: 180px;
   height: 180px;
@@ -818,6 +822,8 @@ h2 {
   }
 }
 .benefits__single--phone .benefits__image::before {
+  -webkit-animation: pulse 2s linear infinite;
+          animation: pulse 2s linear infinite;
   content: "";
   width: 320px;
   height: 320px;
@@ -896,6 +902,8 @@ h2 {
   }
 }
 .benefits__double .benefits__single--image img {
+  -webkit-animation: pulse 1s linear infinite;
+          animation: pulse 1s linear infinite;
   width: 295px;
   height: auto;
   margin-top: 55px;
@@ -1320,6 +1328,9 @@ h2 {
   right: 14px;
   top: 9px;
 }
+.calc__select .select__input::after:hover {
+  border: 2px solid blue;
+}
 .calc__select .select__dropdown {
   display: none;
   position: absolute;
@@ -1393,5 +1404,43 @@ h2 {
 .calc__summary .list__item .item__price {
   font-weight: 700;
   font-size: 1.125rem;
+}
+
+.form__input:focus {
+  border: 2px solid #55DFB4;
+}
+
+@-webkit-keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes pulse {
+  25% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  25% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -11,18 +11,22 @@ const totalprice = document.querySelector(".total__price")
 const number = document.getElementById("products")
 const number2 = document.getElementById("orders")
 
-let firstprice = 0;
-let secoundprice = 0;
-let thirdprice = 0;
-let fourprice = 0;
-let fiveprice = 0;
+
+firstprice = 0;
+secoundprice = 0;
+thirdprice = 0;
+fourprice = 0;
+fiveprice = 0;
+
 
 klick.addEventListener("click", function () {
     drop.style.display = "block"
+    klick.style.border = "2px solid rgb(85,223,180)"
 })
 
 drop.addEventListener("click", function () {
     drop.style.display = "none"
+    klick.style.border = ""
 })
 
 dropelement[0].addEventListener("click", function () {

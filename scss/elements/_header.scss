@@ -73,11 +73,11 @@
 
       @include mobile {
         &:checked {
-           .header__nav {
+          ~ .header__nav {
             display: flex;
           }
 
-           .menu__toggle {
+          ~ .menu__toggle {
             span {
               &:nth-child(1) {
                 transform: rotate(45deg) translate(2px, 5px);
@@ -104,7 +104,7 @@
         margin-bottom: 3px;
         background-color: $color-primary;
         transition: .3s all ease-in-out;
-
+        outline: none;
 
         &:last-child {
           margin-bottom: 0;

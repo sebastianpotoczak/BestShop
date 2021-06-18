@@ -564,16 +564,16 @@ h2 {
   opacity: 0;
 }
 @media (max-width: 792px) {
-  .header .menu__btn:checked .header__nav {
+  .header .menu__btn:checked ~ .header__nav {
     display: flex;
   }
-  .header .menu__btn:checked .menu__toggle span:nth-child(1) {
+  .header .menu__btn:checked ~ .menu__toggle span:nth-child(1) {
     transform: rotate(45deg) translate(2px, 5px);
   }
-  .header .menu__btn:checked .menu__toggle span:nth-child(2) {
+  .header .menu__btn:checked ~ .menu__toggle span:nth-child(2) {
     opacity: 0;
   }
-  .header .menu__btn:checked .menu__toggle span:nth-child(3) {
+  .header .menu__btn:checked ~ .menu__toggle span:nth-child(3) {
     transform: rotate(-45deg) translate(2px, -5px);
   }
 }
@@ -587,6 +587,7 @@ h2 {
   margin-bottom: 3px;
   background-color: #08A6E4;
   transition: 0.3s all ease-in-out;
+  outline: none;
 }
 .header .menu__toggle span:last-child {
   margin-bottom: 0;

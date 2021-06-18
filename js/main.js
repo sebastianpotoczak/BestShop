@@ -11,8 +11,8 @@ const totalprice = document.querySelector(".total__price")
 const number = document.getElementById("products")
 const number2 = document.getElementById("orders")
 
-let firstprice = 0
-let secoundprice = 0
+let firstprice = 0;
+let secoundprice = 0;
 let thirdprice = 0;
 let fourprice = 0;
 let fiveprice = 0;

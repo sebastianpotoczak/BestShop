@@ -1,4 +1,3 @@
-const section = document.querySelector(".calc")
 const klick = document.querySelector(".select__input")
 const drop = document.querySelector(".select__dropdown")
 const dropelement = document.querySelectorAll(".dropdown_element")
@@ -7,13 +6,16 @@ const packageinnertext = document.querySelectorAll(".item__calc")
 const packageprice = document.querySelectorAll(".item__price")
 const checkbox1 = document.getElementById("accounting")
 const checkbox2 = document.getElementById("terminal")
-const calc = document.querySelector(".calc")
 const total = document.getElementById("total-price")
-const calcform = document.querySelectorAll(".calc__form")
 const totalprice = document.querySelector(".total__price")
 const number = document.getElementById("products")
 const number2 = document.getElementById("orders")
 
+let firstprice = 0
+let secoundprice = 0
+let thirdprice = 0;
+let fourprice = 0;
+let fiveprice = 0;
 
 klick.addEventListener("click", function () {
     drop.style.display = "block"
@@ -29,6 +31,7 @@ dropelement[0].addEventListener("click", function () {
     package[2].style.display = "flex"
     packageinnertext[2].innerText = "Basic"
     packageprice[2].innerText = "$" + price
+    thirdprice = price
 })
 dropelement[1].addEventListener("click", function () {
     let price = 25
@@ -36,7 +39,7 @@ dropelement[1].addEventListener("click", function () {
     package[2].style.display = "flex"
     packageinnertext[2].innerText = "Professional"
     packageprice[2].innerText = "$" + price
-    price = secoundprice
+    thirdprice = price
 })
 dropelement[2].addEventListener("click", function () {
     let price = 60
@@ -44,72 +47,68 @@ dropelement[2].addEventListener("click", function () {
     package[2].style.display = "flex"
     packageinnertext[2].innerText = "Premium"
     packageprice[2].innerText = "$" + price
-    price = firstprice
+    thirdprice = price
 })
 
 checkbox1.addEventListener("change", function () {
     if (checkbox1.checked) {
         package[3].style.display = "flex"
+        fourprice = 5
     } else {
         package[3].style.display = "none"
+        fourprice = 0
     }
 })
 checkbox2.addEventListener("change", function () {
     if (checkbox2.checked) {
         package[4].style.display = "flex"
+        fiveprice = 10
     } else {
         package[4].style.display = "none"
+        fiveprice = 0
     }
 })
 
 total.style.display = "flex";
 
-number.addEventListener("input",function (){
+number.addEventListener("input", function () {
     package[0].style.display = "flex"
     let nr = number.value;
     let sum = number.value * 0.5;
     let change = document.querySelector(".item__calc");
     let price = document.querySelector(".item__price")
-    change.innerText = nr + " *"+ "$0.5";
+    change.innerText = nr + " *" + "$0.5";
     price.innerHTML = "$" + sum
-    if(number.value > 0){
-        change.innerText = nr + " *"+ "$0.5";
+    if (number.value > 0) {
+        change.innerText = nr + " *" + "$0.5";
         price.innerHTML = "$" + sum
-    }
-    else {
-        change.innerText = 0 + " *"+ "$0.5";
+    } else {
+        change.innerText = 0 + " *" + "$0.5";
         price.innerHTML = "$" + 0
     }
+    firstprice = sum
 })
-number2.addEventListener("input",function (){
+number2.addEventListener("input", function () {
     package[1].style.display = "flex"
     let nr = number2.value;
     let sum = number2.value * 5;
     let change = document.querySelectorAll(".item__calc");
     let price = document.querySelectorAll(".item__price")
-    change[1].innerText = nr + " *"+ "$5";
+    change[1].innerText = nr + " *" + "$5";
     price[1].innerHTML = "$" + sum
-    if(number2.value > 0){
-        change[1].innerText = nr + " *"+ "$5";
+    if (number2.value > 0) {
+        change[1].innerText = nr + " *" + "$5";
         price[1].innerHTML = "$" + sum
-    }
-    else {
-        change[1].innerText = 0 + " *"+ "$5";
+    } else {
+        change[1].innerText = 0 + " *" + "$5";
         price[1].innerHTML = "$" + 0
     }
+    secoundprice = sum
 })
-    // let firstprice
-    // let secoundprice
-    // let thirdprice = 0;
-    // let fourprice = 0;
-    // let fiveprice = 0;
 
-    // let oneprice = parseInt(firstprice)
-    // let twoprice = parseInt(secoundprice)
+console.log(thirdprice)
+total.addEventListener("click", function () {
+    totalprice.innerHTML = firstprice + secoundprice + thirdprice + fourprice + fiveprice + " $"
+})
 
-    // console.log(fiveprice)
-    // console.log(fourprice)
 
-    // totalprice.innerHTML= parseInt(firstprice + secoundprice )
-    // console.log(totalprice)
-    //

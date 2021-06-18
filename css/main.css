@@ -451,6 +451,7 @@ body {
 
 a {
   text-decoration: none;
+  outline: none;
 }
 
 h2 {
@@ -527,6 +528,7 @@ h2 {
   padding: 28px 18px 22px;
   border-bottom: 4px solid transparent;
   letter-spacing: 0.1875rem;
+  outline: none;
 }
 .header .nav__link:hover {
   color: #000000;
@@ -562,16 +564,16 @@ h2 {
   opacity: 0;
 }
 @media (max-width: 792px) {
-  .header .menu__btn:checked ~ .header__nav {
+  .header .menu__btn:checked .header__nav {
     display: flex;
   }
-  .header .menu__btn:checked ~ .menu__toggle span:nth-child(1) {
+  .header .menu__btn:checked .menu__toggle span:nth-child(1) {
     transform: rotate(45deg) translate(2px, 5px);
   }
-  .header .menu__btn:checked ~ .menu__toggle span:nth-child(2) {
+  .header .menu__btn:checked .menu__toggle span:nth-child(2) {
     opacity: 0;
   }
-  .header .menu__btn:checked ~ .menu__toggle span:nth-child(3) {
+  .header .menu__btn:checked .menu__toggle span:nth-child(3) {
     transform: rotate(-45deg) translate(2px, -5px);
   }
 }
@@ -1142,6 +1144,7 @@ h2 {
   color: #A5A5A5;
   font-weight: 500;
   text-decoration: none;
+  outline: none;
 }
 @media (max-width: 1024px) {
   .contact__details .details__item {
@@ -1254,6 +1257,10 @@ h2 {
 }
 .footer__icons a:first-of-type {
   margin-right: 25px;
+  outline: none;
+}
+.footer__icons a:last-of-type {
+  outline: none;
 }
 
 .calc {

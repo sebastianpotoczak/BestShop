@@ -47,6 +47,7 @@
       color: $color-grey;
       font-weight: 500;
       text-decoration: none;
+      outline: none;
 
       @include tablet {
         margin-bottom: 10px;

@@ -32,6 +32,7 @@ dropelement[0].addEventListener("click", function () {
     packageinnertext[2].innerText = "Basic"
     packageprice[2].innerText = "$" + price
     thirdprice = price
+    totalprice.innerHTML = firstprice + secoundprice + thirdprice + fourprice + fiveprice + " $"
 })
 dropelement[1].addEventListener("click", function () {
     let price = 25
@@ -40,6 +41,7 @@ dropelement[1].addEventListener("click", function () {
     packageinnertext[2].innerText = "Professional"
     packageprice[2].innerText = "$" + price
     thirdprice = price
+    totalprice.innerHTML = firstprice + secoundprice + thirdprice + fourprice + fiveprice + " $"
 })
 dropelement[2].addEventListener("click", function () {
     let price = 60
@@ -48,6 +50,7 @@ dropelement[2].addEventListener("click", function () {
     packageinnertext[2].innerText = "Premium"
     packageprice[2].innerText = "$" + price
     thirdprice = price
+    totalprice.innerHTML = firstprice + secoundprice + thirdprice + fourprice + fiveprice + " $"
 })
 
 checkbox1.addEventListener("change", function () {
@@ -58,6 +61,7 @@ checkbox1.addEventListener("change", function () {
         package[3].style.display = "none"
         fourprice = 0
     }
+    totalprice.innerHTML = firstprice + secoundprice + thirdprice + fourprice + fiveprice + " $"
 })
 checkbox2.addEventListener("change", function () {
     if (checkbox2.checked) {
@@ -67,6 +71,7 @@ checkbox2.addEventListener("change", function () {
         package[4].style.display = "none"
         fiveprice = 0
     }
+    totalprice.innerHTML = firstprice + secoundprice + thirdprice + fourprice + fiveprice + " $"
 })
 
 total.style.display = "flex";
@@ -87,6 +92,7 @@ number.addEventListener("input", function () {
         price.innerHTML = "$" + 0
     }
     firstprice = sum
+    totalprice.innerHTML = firstprice + secoundprice + thirdprice + fourprice + fiveprice + " $"
 })
 number2.addEventListener("input", function () {
     package[1].style.display = "flex"
@@ -104,10 +110,6 @@ number2.addEventListener("input", function () {
         price[1].innerHTML = "$" + 0
     }
     secoundprice = sum
-})
-
-console.log(thirdprice)
-total.addEventListener("click", function () {
     totalprice.innerHTML = firstprice + secoundprice + thirdprice + fourprice + fiveprice + " $"
 })
 

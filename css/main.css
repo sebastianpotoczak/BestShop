@@ -1262,6 +1262,12 @@ h2 {
 .footer__icons a:last-of-type {
   outline: none;
 }
+@media (max-width: 792px) {
+  .footer__icons {
+    display: flex;
+    flex-direction: row;
+  }
+}
 
 .calc {
   padding: 80px 0;

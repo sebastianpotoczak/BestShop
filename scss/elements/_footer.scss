@@ -29,4 +29,10 @@
   &__icons a:last-of-type{
     outline: none;
   }
+  &__icons{
+    @include mobile {
+      display: flex;
+      flex-direction: row;
+    }
+  }
 }

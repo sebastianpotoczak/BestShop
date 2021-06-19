@@ -1,4 +1,4 @@
-const klick = document.querySelector(".select__input")
+const pagedown = document.querySelector(".select__input")
 const drop = document.querySelector(".select__dropdown")
 const dropelement = document.querySelectorAll(".dropdown_element")
 const package = document.querySelectorAll(".list__item");
@@ -19,19 +19,19 @@ fourprice = 0;
 fiveprice = 0;
 
 
-klick.addEventListener("click", function () {
+pagedown.addEventListener("click", function () {
     drop.style.display = "block"
-    klick.style.border = "2px solid rgb(85,223,180)"
+    pagedown.style.border = "2px solid rgb(85,223,180)"
 })
 
 drop.addEventListener("click", function () {
     drop.style.display = "none"
-    klick.style.border = ""
+    pagedown.style.border = ""
 })
 
 dropelement[0].addEventListener("click", function () {
     let price = 0
-    klick.innerText = dropelement[0].innerText
+    pagedown.innerText = dropelement[0].innerText
     package[2].style.display = "flex"
     packageinnertext[2].innerText = "Basic"
     packageprice[2].innerText = "$" + price
@@ -40,7 +40,7 @@ dropelement[0].addEventListener("click", function () {
 })
 dropelement[1].addEventListener("click", function () {
     let price = 25
-    klick.innerText = dropelement[1].innerText
+    pagedown.innerText = dropelement[1].innerText
     package[2].style.display = "flex"
     packageinnertext[2].innerText = "Professional"
     packageprice[2].innerText = "$" + price
@@ -49,7 +49,7 @@ dropelement[1].addEventListener("click", function () {
 })
 dropelement[2].addEventListener("click", function () {
     let price = 60
-    klick.innerText = dropelement[2].innerText
+    pagedown.innerText = dropelement[2].innerText
     package[2].style.display = "flex"
     packageinnertext[2].innerText = "Premium"
     packageprice[2].innerText = "$" + price

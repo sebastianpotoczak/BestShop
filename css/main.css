@@ -475,6 +475,8 @@ h2 {
   font-size: 2rem;
   font-weight: 300;
   color: #08A6E4;
+  -webkit-animation: pulse 2s linear infinite;
+          animation: pulse 2s linear infinite;
 }
 
 .btn {
@@ -616,8 +618,8 @@ h2 {
 .opening__header {
   font-family: "Raleway", sans-serif;
   font-size: 3.0625rem;
-  -webkit-animation: circle 2s linear;
-          animation: circle 2s linear;
+  -webkit-animation: run 2s linear;
+          animation: run 2s linear;
 }
 .opening__heading {
   margin-top: 20px;
@@ -1159,6 +1161,14 @@ h2 {
   margin-right: 10px;
 }
 
+#name:focus {
+  border: none;
+}
+
+#email:focus {
+  border: none;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -1454,6 +1464,26 @@ h2 {
     opacity: 0.5;
   }
   100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes run {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes run {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
     opacity: 1;
   }
 }

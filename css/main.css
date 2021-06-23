@@ -479,6 +479,10 @@ h2 {
           animation: pulse 2s linear infinite;
 }
 
+.logo {
+  outline: none;
+}
+
 .btn {
   color: white;
   font-weight: bold;

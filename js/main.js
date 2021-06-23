@@ -11,12 +11,13 @@ const totalprice = document.querySelector(".total__price")
 const number = document.getElementById("products")
 const number2 = document.getElementById("orders")
 
-
-firstprice = 0;
-secoundprice = 0;
-thirdprice = 0;
-fourprice = 0;
-fiveprice = 0;
+let prices = {
+        firstprice: 0,
+        secoundprice:  0,
+        thirdprice: 0,
+        fourprice: 0,
+        fiveprice: 0,
+}
 
 
 pagedown.addEventListener("click", function () {
@@ -35,8 +36,8 @@ dropelement[0].addEventListener("click", function () {
     package[2].style.display = "flex"
     packageinnertext[2].innerText = "Basic"
     packageprice[2].innerText = "$" + price
-    thirdprice = price
-    totalprice.innerHTML = firstprice + secoundprice + thirdprice + fourprice + fiveprice + " $"
+    prices.thirdprice = price
+    totalprice.innerHTML = prices.firstprice + prices.secoundprice + prices.thirdprice + prices.fourprice + prices.fiveprice + " $"
 })
 dropelement[1].addEventListener("click", function () {
     let price = 25
@@ -44,8 +45,8 @@ dropelement[1].addEventListener("click", function () {
     package[2].style.display = "flex"
     packageinnertext[2].innerText = "Professional"
     packageprice[2].innerText = "$" + price
-    thirdprice = price
-    totalprice.innerHTML = firstprice + secoundprice + thirdprice + fourprice + fiveprice + " $"
+    prices.thirdprice = price
+    totalprice.innerHTML = prices.firstprice + prices.secoundprice + prices.thirdprice + prices.fourprice + prices.fiveprice + " $"
 })
 dropelement[2].addEventListener("click", function () {
     let price = 60
@@ -53,29 +54,29 @@ dropelement[2].addEventListener("click", function () {
     package[2].style.display = "flex"
     packageinnertext[2].innerText = "Premium"
     packageprice[2].innerText = "$" + price
-    thirdprice = price
-    totalprice.innerHTML = firstprice + secoundprice + thirdprice + fourprice + fiveprice + " $"
+    prices.thirdprice = price
+    totalprice.innerHTML = prices.firstprice + prices.secoundprice + prices.thirdprice + prices.fourprice + prices.fiveprice + " $"
 })
 
 checkbox1.addEventListener("change", function () {
     if (checkbox1.checked) {
         package[3].style.display = "flex"
-        fourprice = 5
+            prices.fourprice = 5
     } else {
         package[3].style.display = "none"
-        fourprice = 0
+        prices.fourprice = 0
     }
-    totalprice.innerHTML = firstprice + secoundprice + thirdprice + fourprice + fiveprice + " $"
+    totalprice.innerHTML = prices.firstprice + prices.secoundprice + prices.thirdprice + prices.fourprice + prices.fiveprice + " $"
 })
 checkbox2.addEventListener("change", function () {
     if (checkbox2.checked) {
         package[4].style.display = "flex"
-        fiveprice = 10
+        prices.fiveprice = 10
     } else {
         package[4].style.display = "none"
-        fiveprice = 0
+            prices.fiveprice = 0
     }
-    totalprice.innerHTML = firstprice + secoundprice + thirdprice + fourprice + fiveprice + " $"
+    totalprice.innerHTML = prices.firstprice + prices.secoundprice + prices.thirdprice + prices.fourprice + prices.fiveprice + " $"
 })
 
 total.style.display = "flex";
@@ -95,8 +96,8 @@ number.addEventListener("input", function () {
         change.innerText = 0 + " *" + "$0.5";
         price.innerHTML = "$" + 0
     }
-    firstprice = sum
-    totalprice.innerHTML = firstprice + secoundprice + thirdprice + fourprice + fiveprice + " $"
+    prices.firstprice = sum
+    totalprice.innerHTML = prices.firstprice + prices.secoundprice + prices.thirdprice + prices.fourprice + prices.fiveprice + " $"
 })
 number2.addEventListener("input", function () {
     package[1].style.display = "flex"
@@ -113,8 +114,6 @@ number2.addEventListener("input", function () {
         change[1].innerText = 0 + " *" + "$5";
         price[1].innerHTML = "$" + 0
     }
-    secoundprice = sum
-    totalprice.innerHTML = firstprice + secoundprice + thirdprice + fourprice + fiveprice + " $"
+    prices.secoundprice = sum
+    totalprice.innerHTML = prices.firstprice + prices.secoundprice + prices.thirdprice + prices.fourprice + prices.fiveprice + " $"
 })
-
-

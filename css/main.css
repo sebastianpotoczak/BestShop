@@ -695,6 +695,8 @@ h2 {
 }
 .statistics__single:nth-child(1) .statistics__circle {
   background-color: #FB3B64;
+  -webkit-animation: slide-top 0.5s linear infinite alternate both;
+          animation: slide-top 0.5s linear infinite alternate both;
 }
 .statistics__single:nth-child(1) .statistics__img {
   top: 0;
@@ -1457,7 +1459,7 @@ h2 {
 }
 @-webkit-keyframes pulse {
   25% {
-    opacity: 0.5;
+    opacity: 0.75;
   }
   100% {
     opacity: 1;
@@ -1465,7 +1467,7 @@ h2 {
 }
 @keyframes pulse {
   25% {
-    opacity: 0.5;
+    opacity: 0.75;
   }
   100% {
     opacity: 1;

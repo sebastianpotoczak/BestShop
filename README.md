@@ -2,7 +2,7 @@
 
 Full responsive website
 
-Status: during work
+Status: Finished
 
 
 Preview:

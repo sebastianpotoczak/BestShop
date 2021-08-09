@@ -10,6 +10,7 @@ const total = document.getElementById("total-price")
 const totalprice = document.querySelector(".total__price")
 const number = document.getElementById("products")
 const number2 = document.getElementById("orders")
+const priceButton = document.querySelectorAll('.btn')
 
 let prices = {
         firstprice: 0,
@@ -115,5 +116,36 @@ number2.addEventListener("input", function () {
         price[1].innerHTML = "$" + 0
     }
     prices.secoundprice = sum
+    totalprice.innerHTML = prices.firstprice + prices.secoundprice + prices.thirdprice + prices.fourprice + prices.fiveprice + " $"
+})
+
+priceButton[1].addEventListener('click', function(e){
+    e.preventDefault()
+    let price = 0
+    pagedown.innerText = dropelement[0].innerText
+    package[2].style.display = "flex"
+    packageinnertext[2].innerText = "Basic"
+    packageprice[2].innerText = "$" + price
+    prices.thirdprice = price
+    totalprice.innerHTML = prices.firstprice + prices.secoundprice + prices.thirdprice + prices.fourprice + prices.fiveprice + " $"
+})
+priceButton[2].addEventListener('click', function(e){
+    e.preventDefault()
+    let price = 25
+    pagedown.innerText = dropelement[1].innerText
+    package[2].style.display = "flex"
+    packageinnertext[2].innerText = "Professional"
+    packageprice[2].innerText = "$" + price
+    prices.thirdprice = price
+    totalprice.innerHTML = prices.firstprice + prices.secoundprice + prices.thirdprice + prices.fourprice + prices.fiveprice + " $"
+})
+priceButton[3].addEventListener('click', function(e){
+    e.preventDefault()
+    let price = 60
+    pagedown.innerText = dropelement[2].innerText
+    package[2].style.display = "flex"
+    packageinnertext[2].innerText = "Premium"
+    packageprice[2].innerText = "$" + price
+    prices.thirdprice = price
     totalprice.innerHTML = prices.firstprice + prices.secoundprice + prices.thirdprice + prices.fourprice + prices.fiveprice + " $"
 })
